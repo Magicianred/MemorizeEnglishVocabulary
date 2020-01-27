@@ -130,13 +130,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="cef.redist.x64">
-      <Version>3.3325.1758</Version>
+      <Version>79.1.31</Version>
     </PackageReference>
     <PackageReference Include="CefSharp.Common">
-      <Version>65.0.0-pre01</Version>
+      <Version>79.1.310-pre</Version>
     </PackageReference>
     <PackageReference Include="CefSharp.Wpf">
-      <Version>65.0.0-pre01</Version>
+      <Version>79.1.310-pre</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
