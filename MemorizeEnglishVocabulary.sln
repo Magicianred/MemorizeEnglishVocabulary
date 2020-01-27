@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemorizeEnglishVocabulary", "MemorizeEnglishVocabulary\MemorizeEnglishVocabulary.csproj", "{E7929ADD-4C57-455C-9DDA-4F36923CC7E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemorizeEnglishVocabularyTest", "MemorizeEnglishVocabularyTest\MemorizeEnglishVocabularyTest.csproj", "{D8F3F74C-858D-4A48-AC07-0EB723D806B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7929ADD-4C57-455C-9DDA-4F36923CC7E4}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{E7929ADD-4C57-455C-9DDA-4F36923CC7E4}.Debug|Any CPU.Build.0 = Debug|x64
+		{E7929ADD-4C57-455C-9DDA-4F36923CC7E4}.Debug|x64.ActiveCfg = Debug|x64
+		{E7929ADD-4C57-455C-9DDA-4F36923CC7E4}.Debug|x64.Build.0 = Debug|x64
+		{E7929ADD-4C57-455C-9DDA-4F36923CC7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7929ADD-4C57-455C-9DDA-4F36923CC7E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7929ADD-4C57-455C-9DDA-4F36923CC7E4}.Release|x64.ActiveCfg = Release|x64
+		{E7929ADD-4C57-455C-9DDA-4F36923CC7E4}.Release|x64.Build.0 = Release|x64
+		{D8F3F74C-858D-4A48-AC07-0EB723D806B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8F3F74C-858D-4A48-AC07-0EB723D806B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8F3F74C-858D-4A48-AC07-0EB723D806B7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D8F3F74C-858D-4A48-AC07-0EB723D806B7}.Debug|x64.Build.0 = Debug|Any CPU
+		{D8F3F74C-858D-4A48-AC07-0EB723D806B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8F3F74C-858D-4A48-AC07-0EB723D806B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8F3F74C-858D-4A48-AC07-0EB723D806B7}.Release|x64.ActiveCfg = Release|Any CPU
+		{D8F3F74C-858D-4A48-AC07-0EB723D806B7}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35E59A00-9877-46EF-A291-502DA4E747D4}
+	EndGlobalSection
+EndGlobal

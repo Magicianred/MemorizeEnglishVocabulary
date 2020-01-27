@@ -1,0 +1,74 @@
+﻿<Window x:Class = "WpfApp2.MainWindow"
+        xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d = "http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+        DataContext = "{Binding RelativeSource={RelativeSource Self}}"
+        xmlns:cefSharp = "clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        mc:Ignorable = "d" WindowStartupLocation = "CenterScreen" WindowState = "Maximized"
+        Title = "Vocabulary" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "30" />
+            <RowDefinition Height = "5*" />
+            <RowDefinition Height = "5*" />
+            <RowDefinition Height = "30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "2*" />
+            <ColumnDefinition Width = "4*" />
+            <ColumnDefinition Width = "4*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name = "_currentWord" KeyDown = "_currentWord_OnKeyDown" />
+
+        <ScrollViewer Grid.Row = "1" Grid.RowSpan = "2" Grid.Column = "0"  VerticalScrollBarVisibility="Auto" >
+            <ListBox x:Name = "_vocabularyList" FontSize = "18" KeyDown = "_vocabularyList_OnKeyDown"
+                     ItemsSource="{Binding Model.Lines,Mode=TwoWay}"
+                     SelectionMode = "Extended" VerticalAlignment = "Stretch" />
+
+        </ScrollViewer>
+
+        <cefSharp:ChromiumWebBrowser  Address="{Binding Model.AudioDictionaryAddress,Mode=OneWay}" x:Name = "_sesliSozlükWebBrowser" Grid.Row = "0" Grid.Column = "1"
+                                     Grid.RowSpan = "2" />
+
+        <!--<StackPanel  Grid.Row = "0" Grid.Column = "1"
+                                      Grid.RowSpan = "2" >
+
+            <FlowDocumentScrollViewer>
+
+                <FlowDocument>
+                    <Paragraph DataContext="{Binding Model.Sample1En,Mode=OneWay}"/>
+                    <Paragraph DataContext="{Binding Model.Sample1Tr,Mode=OneWay}"/>
+                </FlowDocument>
+            </FlowDocumentScrollViewer>
+            
+            
+        </StackPanel>-->
+
+
+        <cefSharp:ChromiumWebBrowser Address="{Binding Model.GoogleTranslateAddress,Mode=OneWay}"  x:Name = "_googleTranslate" Grid.Row = "2" Grid.Column = "1" Grid.RowSpan = "2" />
+
+
+
+        <cefSharp:ChromiumWebBrowser  Address="{Binding Model.LongManWebBrowserAddress,Mode=OneWay}" x:Name = "_longManWebBrowser" Grid.Row = "0" Grid.Column = "2" Grid.RowSpan = "2" />
+
+
+        <cefSharp:ChromiumWebBrowser  Address="{Binding Model.ImageBrowserAddress,Mode=OneWay}" x:Name = "_imageBrowser" Grid.Row = "2" Grid.Column = "2" 
+                                     Grid.RowSpan = "2" />
+
+        <Grid Grid.Row = "3" Grid.Column = "0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="GoBackButton" Click="GoBackButton_Click" />
+            <TextBox IsReadOnly="True" Text = "{Binding Model.DataSourcePath,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1"  />
+            <Button x:Name="GoForwardButton" Grid.Column="2" Click="GoForwardButton_Click"  />
+        </Grid>
+
+
+
+    </Grid>
+</Window>
